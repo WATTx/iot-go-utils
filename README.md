@@ -4,6 +4,12 @@
 
 `mqttclient` helps to construct an aws iot mqtt client.
 
+Installation:
+
+```
+go get github.com/wattx/go-aws-iot-utils/mqttclient
+```
+
 Example usage:
 
 ```
