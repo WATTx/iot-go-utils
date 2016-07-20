@@ -30,7 +30,8 @@ if err != nil {
 
 `Endpoint` usually has a format of `tls://FOOBAR.iot.eu-west-1.amazonaws.com:8883`
 
-`onConnect` is used to notify when reconnect to the mqtt broker is happening. Since aws iot doesn't support persistent sessions you can use as a work around for refreshing your subscriptions.
+`onConnect` is used to notify when reconnect to the mqtt broker is happening.
+Since aws iot doesn't support persistent sessions you can use it as a work around for refreshing your subscriptions.
 
 `CertsFolder` should contain:
 - `certificate.pem.crt`
