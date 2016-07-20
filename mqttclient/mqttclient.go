@@ -14,13 +14,13 @@ import (
 // ClientConfig contains the configuration for the remote mqtt client
 type ClientConfig struct {
 	CertsFolder string
-	CloudMQTT   string
+	Endpoint    string
 	ClientID    string
 }
 
 // NewClient returns a new mqtt client connected to AWS.
 func NewClient(config ClientConfig) (mqtt.Client, chan bool, error) {
-	opts := mqtt.NewClientOptions().AddBroker(config.CloudMQTT)
+	opts := mqtt.NewClientOptions().AddBroker(config.Endpoint)
 	opts.SetClientID(config.ClientID)
 
 	lastWillMessage, err := lastWillMessage(config.ClientID)
